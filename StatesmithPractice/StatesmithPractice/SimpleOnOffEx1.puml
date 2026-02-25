@@ -1,0 +1,7 @@
+/'! $CONFIG : toml
+SmRunnerSettings.transpilerId = "CSharp"
+
+[RenderConfig.CSharp]
+NameSpace = "BeziqueCardGame;"
+'/
+
