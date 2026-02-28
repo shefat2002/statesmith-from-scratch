@@ -1,0 +1,30 @@
+@startuml
+/'! $CONFIG : toml
+SmRunnerSettings.transpilerId = "CSharp"
+
+[RenderConfig.CSharp]
+NameSpace = "StatesmithPractice;"
+'/
+hide empty description
+
+state OFF
+
+[*] -> OFF
+state ON_GROUP{
+    OFF -> ON1 : INCREASE
+    ON1 -> ON2 : INCREASE
+    ON2 -> ON_HOT : INCREASE
+    
+    ON1 -> OFF : DIM
+    ON2 -> ON1 : DIM
+    ON_HOT -> ON2 : DIM
+}
+ON_GROUP -> OFF : OFF
+
+OFF : enter / light_off();
+ON1 : enter / light_blue();
+ON2 : enter / light_yellow();
+ON_HOT : enter / light_red();
+
+
+@enduml
