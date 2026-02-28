@@ -1,0 +1,12 @@
+@startuml
+/'! $CONFIG : toml
+SmRunnerSettings.transpilerId = "CSharp"
+
+[RenderConfig.CSharp]
+NameSpace = "StatesmithPractice;"
+'/
+hide empty description
+
+[*] ->  
+
+@enduml
